@@ -4,8 +4,8 @@ const Product = require("../../models/productModel")
 const getProductByCategory = async (req,res) => {
 
     try {
-
-        const products = await Product.findOne({ category: req.params.category});
+       
+        const products = await Product.find({ category: req.params.category});
 
         if(!products) {
             return res.status(200).json({
